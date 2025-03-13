@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <button id="logout">Logout</button>
+        </nav>
+    </header>
+
+    <section id="admin-notice">
+        <h2>Post a Notice</h2>
+        <form id="notice-form">
+            <label for="notice-content">Notice Content:</label>
+            <textarea id="notice-content" required></textarea>
+            <button type="submit">Post Notice</button>
+        </form>
+    </section>
+
+    <section id="manage-posts">
+        <h2>Manage Posts</h2>
+        <div id="post-list">
+            <!-- Posts will be dynamically added here -->
+        </div>
+    </section>
+
+    <section id="manage-users">
+        <h2>Manage Users</h2>
+        <div id="user-list">
+            <!-- Users will be dynamically added here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Creative Tech</p>
+    </footer>
+
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/admin.js"></script>
+</body>
+</html>

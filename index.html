@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Tech</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Website Logo" class="logo">
+            <h1>Welcome to My Creative Tech</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html" id="login-link">Login</a>
+            <a href="signup.html" id="signup-link">Signup</a>
+            <button id="logout" style="display: none;">Logout</button>
+        </nav>
+    </header>
+    <section id="notice">
+        <h2>Notice from Admin</h2>
+        <p id="admin-notice">No notice available.</p> <!-- Default message -->
+    </section>
+
+    <section id="dashboard" style="display: none;">
+        <h2>Dashboard</h2>
+        <div id="user-info"></div>
+        <form id="post-form">
+            <label for="post-title">Post Title:</label>
+            <input type="text" id="post-title" required>
+        
+            <label for="post-content">Post Content:</label>
+            <textarea id="post-content" required></textarea>
+        
+            <label for="post-image">Image URL (optional):</label>
+            <input type="url" id="post-image" placeholder="Paste image URL here">
+        
+            <label for="post-link">Link (optional):</label>
+            <input type="url" id="post-link" placeholder="Paste link URL here">
+        
+            <button type="submit">Publish Post</button>
+        </form>
+        <div id="user-posts"></div>
+    </section>
+
+    <section id="posts">
+        <h2>Recent Posts</h2>
+        <div id="post-list">
+            <!-- Posts will be dynamically added here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Creative Tech</p>
+    </footer>
+
+    <script>
+        // Fetch and display the admin notice on page load
+        const adminNotice = localStorage.getItem('adminNotice');
+        if (adminNotice) {
+            document.getElementById('admin-notice').innerText = adminNotice;
+        }
+    </script>
+
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
